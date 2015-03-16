@@ -1,0 +1,16 @@
+#! /usr/bin/env php
+
+<?php
+
+use Symfony\Component\Console\Application;
+use Symfony\Component\Console\Input\InputArgument;
+
+require 'vendor/autoload.php';
+require 'src/helpers/helpers.php';
+require 'src/helpers/database.php';
+
+$app = new Application('Transaction Manager',1);
+$app->add(new \PaulB\Transaction1());
+$app->add(new \PaulB\Transaction2());
+$app->add(new \PaulB\Transaction3());
+$app->run();
